@@ -2,63 +2,71 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-
 }
 
 /* NAV */
 
 nav {
-    height:90px;
+    height:60px;
     width: 100%;
+    align-items: center;
     background-repeat: no-repeat;
     background-size: auto;
     background-color:rgb(45, 45, 45);
     border-bottom: 1px;
     border-top: 1px;
-
+    color: white;
 }
 
-.logo {
-    height: 85px;
-    margin-left: 5px;
+section.section-nav {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
     
 }
 
-/* BODY */
-
-section.container {
-    margin:auto;
-    max-width: 85%;
-    border: 1px solid red;
-    font-family: "Titillium Web", sans-serif;
-    background-color: rgba(218, 218, 218, 1.0);
+.logo {
+    vertical-align: center;
+    margin-left: 5px;
+    margin-top: 7px;    
+    height: 45px;
 }
+
+/* BODY */
 
 body {
     font-family: "Titillium Web", sans-serif;
     background: url(images/mural-esquerda.jpg) left top no-repeat,
                 url(images/mural-direita.jpg) right top no-repeat;
     background-attachment: fixed;
-    background-size: 14%;
+    background-size: contain;
+
+}
+
+section.container {
+    margin:auto;
+    max-width: 85%;
+    border-right: 2px solid black ; border-left: 2px solid black ;
+    font-family: "Titillium Web", sans-serif;
+    background-color: rgb(255, 255, 255);
+    min-height: 87vh;
 
 }
 
 p.nome-time-direita {
     text-align: right;
-    margin-right: 5px;
-    border: 1px solid red;
 }
 
 p.nome-time-esquerda {
     text-align: left;
-    margin-left: 5px;
-    border: 1px solid red;
 }
 
 div.p-esquerda, div.p-direita {
     display: inline-block;
     text-align: left;
     vertical-align: top;
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 
@@ -97,3 +105,61 @@ div.direita {
 }
 
 
+
+/* LINKS NAV */
+
+footer {
+    position: absolute;
+    
+    width: 100%;
+    background-color: #2d2d2d;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    width: 200px;
+}
