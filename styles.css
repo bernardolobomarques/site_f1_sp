@@ -44,7 +44,7 @@ body {
 }
 
 section.container {
-    margin:auto;
+    margin: 0 auto;
     max-width: 85%;
     border-right: 2px solid black ; border-left: 2px solid black ;
     font-family: "Titillium Web", sans-serif;
@@ -94,14 +94,19 @@ div.esquerda {
     display: flex;
     justify-content: left;
     margin:20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+
+#redbull {
+    margin-top: 0;
+    padding-top: 20px;
 }
 
 div.direita {
     display: flex;
     justify-content: right;
     margin:20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
