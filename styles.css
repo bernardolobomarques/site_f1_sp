@@ -22,11 +22,17 @@ body {
     min-width: 1070px;
 }
 
-.titulo, titulo-equipe {
-    padding-left: 15px;
+.titulo {
+    padding-left: 20px;
     font-size: 30px;
+    text-align: center;
 }
 
+.titulo-equipe {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 20px;
+}
 
 
 
@@ -35,21 +41,15 @@ body {
 section.container {
     flex: 1;
     margin: 0 auto;
+    padding-bottom:25px;
+
     max-width: 85%;
     border-left: 3px solid black;
     border-right: 3px solid black;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
-    min-width: 1016px;
+    min-width: 1025px;
 }
-
-hr {
-    color: black;
-
-}
-
-
-
 
 /* BARRA DE NAVEGAÇÃO */
 
@@ -59,10 +59,11 @@ nav {
     display: flex;
     align-items: center;
     background-color: rgb(45, 45, 45);
-    color: white;
+    color: rgb(255, 255, 255);
     border-top: none;
     background-repeat: no-repeat;
     background-size: auto;
+    border-bottom: 3px solid black;
 }
 
 section.section-nav {
@@ -82,7 +83,8 @@ section.section-nav {
 
 .logo-link {
     display: block;
-    max-height: 100%;}
+    max-height: 100%;
+}
 
 
 
@@ -90,13 +92,14 @@ section.section-nav {
 
 /* IMAGENS */
 
-figure.imagem-carro {
+figure.imagem-carro-direita,
+figure.imagem-carro-esquerda {
     display: inline-block;
     text-align: center;
-
 }
 
-figure.imagem-carro img {
+figure.imagem-carro-direita img,
+figure.imagem-carro-esquerda img {
     max-height: 360px;
     max-width: 480px;
     min-height: 180px;
@@ -105,13 +108,27 @@ figure.imagem-carro img {
     border-radius: 10px;
     margin-left: 6px;
     margin-right: 6px;
+
 }
+
+figure.imagem-carro-esquerda img {
+    box-shadow: 8px 8px 14px black;
+}
+
+figure.imagem-carro-direita img {
+    box-shadow: -8px 8px 14px black;
+}
+
 
 
 div.esquerda, div.direita {
     display: flex;
-    margin: 20px;
-
+    margin: 10px;
+    margin-top:30px;
+    padding:10px;
+    background-color: rgba(110, 110, 110, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 5px 7px black;
 }
 
 div.esquerda {
@@ -123,18 +140,51 @@ div.direita {
     justify-content: flex-end;
 }
 
-#redbull {
+
+
+div.esquerda:first-of-type {
+    padding-top: 10px ;
     margin-top: 0;
-    padding-top: 20px;
 }
 
-#stake {
-    margin-bottom: 0;
-    padding-bottom: 20px;
+div.direita:last-of-type {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+/*TEXTOS IMAGEM CARROS*/
+
+figcaption.fig-car{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.nome-time-direita{
+    margin-top: 5px;
+    font-size: 23px;
+    margin-right: 10px;
+    text-align: right;
+    color: red;
+    text-shadow: -1px 1px 1px rgb(29, 3, 3);
+}
+.nome-time-esquerda {
+    margin-top: 5px;
+    font-size: 23px;
+    margin-left: 10px;
+    text-align: left;
+    color: red;
+    text-shadow: -1px 1px 1px rgb(29, 3, 3);
 }
 
 
-
+.descricao-time{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 600;
+    text-align: justify;
+    max-width: 65vh;
+}
 
 /* RODAPÉ */
 
@@ -146,6 +196,7 @@ footer {
     padding: 20px;
     color: white;
     position: relative;
+    border-top: 3px solid black;
 }
 
 
