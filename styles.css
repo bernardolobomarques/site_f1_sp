@@ -1,3 +1,7 @@
+@import url(/CSS/home.css);
+@import url(/CSS/miniatura.css);
+@import url(/CSS/navbar.css);
+
 *{
     padding: 0;
     margin: 0;
@@ -17,7 +21,6 @@ body {
     color: rgb(255,255,255)
 }
 
-
 section.container {
     flex: 1;
     margin: 0 auto;
@@ -29,240 +32,54 @@ section.container {
     min-width: 1000px;
 }
 
-.titulo{
-    padding: 85px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
-
-
-
-/*Imagens carro miniatura*/
-
-.miniatura{
-    width: 100%;
+.titulo {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 75vh;
 }
 
-.miniatura div.galeria{
-    width: 100%;
-    height: 25vh;
+.foto-titulo {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.miniatura div.galeria div.single-galeria{
-    position: relative;
-    width: 10%;
-    height: 100%;
-    margin: 0 3px;
-    transition: width 600ms;
-}
-
-.miniatura div.galeria div.single-galeria img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 13px;
-}
-
-
-
-
-/*Infos miniatura*/
-
-.miniatura div.galeria div.single-galeria div.info{
-    position: absolute;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 65%, transparent);
-    padding: 16% 8%;
-    bottom: 0;
-    border-radius: 13px;
-}
-
-div.info{
-    text-align: center;
-}
-
-.miniatura div.galeria div.single-galeria div.info h1{
-    font-size: 16px;
-    color: white;
-}
-
-.miniatura div.galeria div.single-galeria div.info a{
-    font-size: 10px;
-    line-height: 28px;
-    color: rgba(255, 215, 0, 1);
-    text-decoration: none;
-}
-
-.miniatura div.galeria div.single-galeria div.info a:hover{
-    text-decoration: underline;
-
-}
-
-
-
-
-
-/*Animação carrossel*/
-
-.miniatura div.galeria:hover div.single-galeria:first-child{
-    width: 10% !important;
-
-
-}
-
-.miniatura div.galeria div.single-galeria:hover{
-    width: 40% !important;
-}
-
-.miniatura div.galeria div.single-galeria:first-child:hover{
-    width: 40% !important;
-}
-
-
-
-
-/* Imagens grande do carro*/
-
-section.img-car {
-    width: 100%;
-    text-align: center;
-    justify-content:center;
-    background-color: rgb(35, 35, 35);
-    padding-top:80px;
-
-
-}
-
-section.img-car img {
+    width: 95%;
     height: 62vh;
-    margin-top: 5px;
-    border-radius: 15px;
-
-
-}
-
-
-/* Barra de navegação*/
-
-nav {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    min-width: 1100px;
-    position: fixed;
-    align-items: center;
-    background-color: rgb(35, 35, 35);
-    color: rgb(255, 255, 255);
-    border-top: none;
+    background-image: url('/images/autodromo.jpg');
     background-repeat: no-repeat;
-    background-size: auto;
-    border-bottom: 2px solid rgb(255, 0, 0);
+    background-size: cover;
+    border-radius: 25px;
 }
 
-section.section-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    min-width: 1110px;
-    border: 1px solid red;
+.texto-titulo {
+    text-align: center;
+    color: red;
+    text-shadow: 0px 4px 1px rgb(23, 0, 0);
+    font-size: 50px;
+    margin: 0;
 }
 
-
-.logo {
-    margin-top: 2px;
-    max-width: 150px;
-    object-fit: contain;
-    display: block;
-    margin-left: 3px;
-    border: 1px solid red;
-}
-
-.logo-link {
-    display: block;
-    max-height: 100%;
-}
-
-/* LINKS DE NAVEGAÇÃO */
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    
-}
-
-nav ul li {
-    margin: 0 5px;
-    position: relative;
-    border: 1px solid red;
-}
-
-nav ul li a {
+.titulo-equipe{
+    text-align: center;
+    padding-top: 80px;
     color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
+    font-size: 25px;
 }
 
-nav ul li a:hover {
-    background-color: #555;
-}
 
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-}
-
-nav ul li:hover ul {
-    display: block;
-}
-
-nav ul li ul li {
-    display: block;
-}
-
-nav ul li ul li a {
-    padding: 10px;
-    width: 200px;
-}
 
 /* FOOTER */
 
 footer {
     width: 100%;
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(20, 20, 20);
     text-align: center;
     padding: 20px;
     color: white;
     position: relative;
-    border-top: 2px solid rgb(255, 0, 0);
+    border-top: 2px solid rgb(140, 140, 140);
 }
 
 
-.data-evento{
-    background-color: white;
-    font-size: 30px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 30%;
-    border-radius: 15px;
-}
